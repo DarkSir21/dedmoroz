@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Заказ Деда Мороза и Снегурочки на дом в Кемерово</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+</head>
+<body>
+  <style>
+    body, html {
+      font-size: 16px;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    p {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    form {
+      max-width: 800px;
+      margin: 100px auto 100px;
+      text-align: center;
+    }
+
+    .bg-img {
+      position: relative;
+      background: url('images/sushhestvuet_li_ded_moroz.jpg') center / cover;
+      padding: 12% 5%;
+    }
+
+    .bg-img::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,.7);
+    }
+
+    .main-content {
+      position: relative;
+      z-index: 10;
+    }
+
+    .main-title {
+      font-size: 58px;
+    }
+
+    .main-desc {
+      font-size: 38px;
+    }
+
+    .main-title,
+    .main-desc {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      text-align: center;
+      color: #fff;
+    }
+
+    .btns {
+      margin-top: 15px;
+      text-align: center;
+    }
+
+     .btns .mdl-button {
+      color: #fff;
+      margin: 15px;
+      height: 48px;
+      padding-right: 25px;
+      padding-left: 25px;
+    }
+
+    .btns .mdl-button--accent.mdl-button--accent.mdl-button--raised {
+      background-color: rgb(244,67,54);
+    }
+
+    .mdl-button--accent.mdl-button--accent {
+      color: rgb(244,67,54); 
+    }
+
+    span.blue {
+      display: inline-block;
+      /*padding: 0 8px;
+      background-color: rgb(3,169,244);*/
+    }
+
+    span.red {
+      display: inline-block;
+      /*padding: 0 8px;
+      background-color: rgb(244,67,54);*/
+    }
+
+    .phone {
+      padding-left: 25px;
+      text-decoration: none;
+      color: currentColor;      
+    }
+
+    .demo-layout-transparent .mdl-layout__header,
+    .demo-layout-transparent .mdl-layout__drawer-button {
+      /* This background is dark, so we set text to white. Use 87% black instead if
+        your background is light. */
+      color: #848484;
+      background-color: #fff;
+    }
+
+    .mdl-layout__header-row .mdl-navigation__link {
+      color: #848484;
+    }
+
+    .programms__title {
+      font-family: 'Open Sans', sans-serif;
+      text-align: center;
+      margin: 65px;
+      font-weight: 300;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 40px auto 0;
+      padding: 8px;
+    }
+
+    .container:first-child {
+      margin-top: 0;
+    }
+
+    .container h3,
+    .container h4 {
+      font-weight: 300;
+      line-height: 1.5;
+      font-family: 'Open Sans', sans-serif;
+      margin: 0 0 25px;
+    }
+
+    .adv_image {
+      width: 50%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .adv_image img {
+      max-width: 100%;
+    }
+
+    h4 {
+      text-align: center;
+    }
+
+    .cell-padding {
+      padding: 15px;
+    }
+
+    .container table,
+    .table__title {
+      width: 60%;
+      margin: 0 auto;
+    }
+
+    .table__title {
+      margin: 15px auto;
+      font-size: 14px;
+    }
+
+    @font-face {
+      font-family: "Rubl Regular";
+      font-weight: normal;
+      src: url('fonts/rubl-regular-webfont.woff2') format("woff2"), url('fonts/rubl-regular-webfont.woff') format("woff");
+    }
+
+  .rubl {
+    font-family: "Rubl Regular";
+  }
+  
+  </style>
+  <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header mdl-layout--fixed-drawer">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">Дед Мороз в Кемерово</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation -->
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="#">Преимущества</a>
+          <a class="mdl-navigation__link" href="#">Программы</a>
+          <a class="mdl-navigation__link" href="#">Цены</a>
+          <a class="mdl-navigation__link" href="#">Отзывы</a>
+        </nav>
+        <a href="tel:8 (904) 994-30-26" class="mdl-layout-title phone">8 (904) 994-30-26</a>
+      </div>
+    </header>
+    <main class="mdl-layout__content">
+      <div class="bg-img">
+        <div class="main-content">
+          <h1 class="main-title">Закажи <span class="red">Деда Мороза</span> и <span class="blue">Снегурочку</span> на дом</h1>
+          <h2 class="main-desc">Получи скидку на первый заказ</h2>
+          <div class="btns">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+              Заказать
+            </button>
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect">
+              Подробнее
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <section class="programms">
+        <h2 class="programms__title">Наши преимущества</h2>
+        <div class="mdl-grid container">
+          <div class="mdl-cell mdl-cell--3-col cell-padding">
+            <div class="adv_image">
+              <img src="images/santa-claus.svg">
+            </div>
+            <h4>Профессиональные актеры</h4>
+            
+          </div>
+          <div class="mdl-cell mdl-cell--3-col cell-padding">
+            <div class="adv_image">
+              <img src="images/giftbox.svg">
+            </div>
+            <h4>Фиксированая оплата</h4>
+            
+          </div>
+          <div class="mdl-cell mdl-cell--3-col cell-padding">
+            <div class="adv_image">
+              <img src="images/christmas-card.svg">
+            </div>
+            <h4>Бесплатные фото и видео</h4>
+            
+          </div>
+          <div class="mdl-cell mdl-cell--3-col cell-padding">
+            <div class="adv_image">
+              <img src="images/reindeer.svg">
+            </div>
+            <h4>100% трезвый Дед Мороз</h4>
+            
+          </div>
+        </div>
+      </section>
+
+      <section class="programms">
+        <h2 class="programms__title">Наши программы</h2>
+        <!-- Image card -->
+        <style>
+        .show.mdl-card {
+          width: 100%;
+          height: 425px;
+        }
+        .show > .mdl-card__actions {
+          height: 52px;
+          padding: 16px;
+          background: rgba(0, 0, 0, 0.2);
+        }
+        .show__filename {
+          color: #fff;
+          font-size: 14px;
+          font-weight: 500;
+        }
+
+        .show_1 {
+           background: url('images/show_1.jpg') center / cover;
+        }
+
+        .show_2 {
+           background: url('images/show_2.jpg') center / cover;
+        }
+
+        .show_3 {
+           background: url('images/show_3.jpg') center / cover;
+        }
+        </style>
+
+        <div class="mdl-grid container">
+          <div class="mdl-cell mdl-cell--6-col">
+            <div class="show show_1 mdl-card mdl-shadow--2dp">
+              <div class="mdl-card__title mdl-card--expand"></div>
+            </div>
+          </div>
+          <div class="mdl-cell mdl-cell--6-col cell-padding">
+            <h3>Концертное выступление<br> более 45 мин</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum voluptas corrupti illo, eveniet, mollitia placeat voluptatibus atque delectus! Possimus consequuntur voluptate eveniet ut, similique dolorem corporis sed accusantium molestias autem blanditiis, saepe illum. Rem dolore, animi totam molestiae eveniet rerum iusto minima.</p>
+            <!-- Accent-colored flat button -->
+            <button class="mdl-button mdl-js-button mdl-button--accent">
+              Узнать подробнее
+            </button>
+          </div>
+        </div>
+
+        <div class="mdl-grid container">
+          <div class="mdl-cell mdl-cell--6-col cell-padding">
+            <h3>Дед мороз и Снегурочка на дом<br> 30 мин</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum voluptas corrupti illo, eveniet, mollitia placeat voluptatibus atque delectus! Possimus consequuntur voluptate eveniet ut, similique dolorem corporis sed accusantium molestias autem blanditiis, saepe illum. Rem dolore, animi totam molestiae eveniet rerum iusto minima.</p>
+            <button class="mdl-button mdl-js-button mdl-button--accent">
+              Узнать подробнее
+            </button>
+          </div>
+          <div class="mdl-cell mdl-cell--6-col">
+            <div class="show show_2 mdl-card mdl-shadow--2dp">
+              <div class="mdl-card__title mdl-card--expand"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mdl-grid container">
+          <div class="mdl-cell mdl-cell--6-col">
+            <div class="show show_3 mdl-card mdl-shadow--2dp">
+              <div class="mdl-card__title mdl-card--expand"></div>
+            </div>
+          </div>
+          <div class="mdl-cell mdl-cell--6-col cell-padding">
+            <h3>Нестандартное выступление</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum voluptas corrupti illo, eveniet, mollitia placeat voluptatibus atque delectus! Possimus consequuntur voluptate eveniet ut, similique dolorem corporis sed accusantium molestias autem blanditiis, saepe illum. Rem dolore, animi totam molestiae eveniet rerum iusto minima.</p>
+            <button class="mdl-button mdl-js-button mdl-button--accent">
+              Узнать подробнее
+            </button>
+          </div>
+        </div>
+
+
+
+      </section>
+
+      <section class="programms">
+        <h2 class="programms__title">Прайс</h2>
+        <div class="mdl-grid container">
+          <div class="mdl-cell mdl-cell--12-col">
+            <div class="table__title">Заказ Деда Мороза и Снегурочки на дом 30 мин</div>
+            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+              <thead>
+                <tr>
+                  <th class="mdl-data-table__cell--non-numeric">Дата</th>
+                  <th>Цена</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">До 19 декабря</td>
+                  <td>3300 <span class="rubl">Р</span></td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">20-22 декабря</td>
+                  <td>4200 <span class="rubl">Р</span></td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">23-25 декабря</td>
+                  <td>4400 <span class="rubl">Р</span></td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">26-29 декабря</td>
+                  <td>4700 <span class="rubl">Р</span></td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">30 декабря</td>
+                  <td>4800 <span class="rubl">Р</span></td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">31 декабря до 15:00</td>
+                  <td>5500 <span class="rubl">Р</span></td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">31 декабря до 15:00 до 17:00</td>
+                  <td>6500 <span class="rubl">Р</span></td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">31 декабря до 17:00 до 19:00</td>
+                  <td>7500 <span class="rubl">Р</span></td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">31 декабря до 19:00 до 21:00</td>
+                  <td>8000 <span class="rubl">Р</span></td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">31 декабря до 21:00 до 22:00</td>
+                  <td>9000 <span class="rubl">Р</span></td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">31 декабря до  22:00 до 23:00</td>
+                  <td>9500 <span class="rubl">Р</span></td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">31 декабря до  23:00 до 01:00</td>
+                  <td>10000 <span class="rubl">Р</span></td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">31 декабря после 01:00</td>
+                  <td>9000 <span class="rubl">Р</span></td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">2 января</td>
+                  <td>3000 <span class="rubl">Р</span></td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">3-6 января</td>
+                  <td>2900 <span class="rubl">Р</span></td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">7-8 января</td>
+                  <td>4000 <span class="rubl">Р</span></td>
+                </tr>
+                <tr>
+                  <td colspan="2" style="text-align:left">*Все цены указаны с учетом скидки</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      </section>
+      <section class="programms">
+        <!-- Textfield with Floating Label -->
+        <form action="#">
+        <h2 class="programms__title">Напишите нам, мы перезвоним</h2>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="sample3">
+            <label class="mdl-textfield__label" for="sample3">Как вас зовут</label>
+          </div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="sample3">
+            <label class="mdl-textfield__label" for="sample3">Ваш телефон</label>
+          </div>
+          <div class="btns">
+            <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+              Отправить
+            </button>
+          </div>
+        </form>
+
+      </section>
+      <footer class="mdl-mini-footer">
+        <div class="mdl-mini-footer__left-section">
+          <div class="mdl-logo">Дед Мороз в Кемерово</div>
+          <ul class="mdl-mini-footer__link-list">
+            <li><a href="#">Арт-группа Монти Лайм</a></li>
+            <li><a href="tel:8 (904) 994-30-26">8 (904) 994-30-26</a></li>
+          </ul>
+        </div>
+      </footer>
+    </main>
+  </div>
+<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+</body>
+</html>
