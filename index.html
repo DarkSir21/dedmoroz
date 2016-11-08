@@ -30,6 +30,10 @@
       text-align: center;
     }
 
+    footer {
+      position: relative;
+    }
+
     .bg-img {
       position: relative;
       background: url('images/sushhestvuet_li_ded_moroz.jpg') center / cover;
@@ -199,6 +203,39 @@
     cursor: pointer;
   }
 
+
+  .decor_* img {
+    max-width: 100%;
+  }
+
+  .decor_1 {
+    position: absolute;
+    width: 80px;
+    top: 30%;
+    left: calc(20% - 80px);
+  }
+
+  .decor_2 {
+    position: absolute;
+    width: 80px;
+    bottom: -78px;
+    right: 20%;
+  }
+
+  .decor_3 {
+    position: absolute;
+    width: 150px;
+    bottom: -116px;
+    right: 4%;
+  }
+
+  .decor_4 {
+    position: absolute;
+    width: 100px;
+    top: -100px;
+    right: 4%;
+  }
+
   </style>
   <div class="demo-layout-transparent mdl-layout mdl-js-layout">
     <header class="mdl-layout__header mdl-layout--fixed-drawer">
@@ -314,10 +351,11 @@
         </style>
 
         <div class="mdl-grid container">
-          <div class="mdl-cell mdl-cell--6-col">
+          <div class="mdl-cell mdl-cell--6-col" style="position:relative">
             <div class="show show_1 mdl-card mdl-shadow--2dp">
               <div class="mdl-card__title mdl-card--expand"></div>
             </div>
+            <div class="decor_3"><img src="images/lights.svg"></div>
           </div>
           <div class="mdl-cell mdl-cell--6-col cell-padding">
             <h3>Концертное выступление<br> более 45 мин</h3>
@@ -365,10 +403,14 @@
 
       <section class="programms">
         <a name="price"></a>
+
         <h2 class="programms__title">Прайс</h2>
         <div class="mdl-grid container">
-          <div class="mdl-cell mdl-cell--12-col">
+          <div class="mdl-cell mdl-cell--12-col" style="position:relative">
             <div class="table__title">Заказ Деда Мороза и Снегурочки на дом 30 мин</div>
+
+            <div class="decor_1"><img src="images/bauble.svg"></div>
+            <div class="decor_2"><img src="images/bauble_1.svg"></div>
             <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
               <thead>
                 <tr>
@@ -446,6 +488,7 @@
                 </tr>
               </tbody>
             </table>
+ 
           </div>
       </section>
       <section class="programms section_gray">
@@ -519,6 +562,7 @@
             <li><a href="tel:8 (904) 994-30-26">8 (904) 994-30-26</a></li>
           </ul>
         </div>
+        <div class="decor_4"><img src="images/snowman.svg"></div>
       </footer>
     </main>
   </div>
