@@ -6,6 +6,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
   <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+  <link rel="stylesheet" href="dialog-polyfill.css">
+  <link rel="stylesheet" href="owl.carousel.min.css">
+  <link rel="stylesheet" href="owl.theme.default.min.css">
 </head>
 <body>
   <style>
@@ -118,7 +121,7 @@
     .programms__title {
       font-family: 'Open Sans', sans-serif;
       text-align: center;
-      margin: 65px;
+      margin: 0 0 65px;
       font-weight: 300;
     }
 
@@ -178,13 +181,30 @@
   .rubl {
     font-family: "Rubl Regular";
   }
+
+  .section_gray {
+    background-color: #f6f6f6;
+  }
+
+  .programms {
+    padding: 80px 0;
+  }
   
+  .custom-dialog.mdl-dialog {
+    width: 475px;
+  }
+
+  .close {
+    margin-left: 94%;
+    cursor: pointer;
+  }
+
   </style>
   <div class="demo-layout-transparent mdl-layout mdl-js-layout">
     <header class="mdl-layout__header mdl-layout--fixed-drawer">
       <div class="mdl-layout__header-row">
         <!-- Title -->
-        <span class="mdl-layout-title">Дед Мороз в Кемерово</span>
+        <span class="mdl-layout-title">Заказ Дед Мороз в Кемерово</span>
         <!-- Add spacer, to align navigation to the right -->
         <div class="mdl-layout-spacer"></div>
         <!-- Navigation -->
@@ -203,10 +223,10 @@
           <h1 class="main-title">Закажи <span class="red">Деда Мороза</span> и <span class="blue">Снегурочку</span> на дом</h1>
           <h2 class="main-desc">Получи скидку на первый заказ</h2>
           <div class="btns">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent show-dialog">
               Заказать
             </button>
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect show-dialog">
               Подробнее
             </button>
           </div>
@@ -248,7 +268,7 @@
         </div>
       </section>
 
-      <section class="programms">
+      <section class="programms section_gray">
         <a name="programms"></a>
         <h2 class="programms__title">Наши программы</h2>
         <!-- Image card -->
@@ -279,6 +299,18 @@
         .show_3 {
            background: url('images/show_3.jpg') center / cover;
         }
+
+        .show_4 {
+           background: url('images/show_4.jpg') center / cover;
+        }
+        
+        .show_5 {
+           background: url('images/show_5.jpg') center / cover;
+        }
+        
+        .no-image {
+           background: url('images/no-image-box.png') center / cover;
+        }
         </style>
 
         <div class="mdl-grid container">
@@ -291,7 +323,7 @@
             <h3>Концертное выступление<br> более 45 мин</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum voluptas corrupti illo, eveniet, mollitia placeat voluptatibus atque delectus! Possimus consequuntur voluptate eveniet ut, similique dolorem corporis sed accusantium molestias autem blanditiis, saepe illum. Rem dolore, animi totam molestiae eveniet rerum iusto minima.</p>
             <!-- Accent-colored flat button -->
-            <button class="mdl-button mdl-js-button mdl-button--accent">
+            <button class="mdl-button mdl-js-button mdl-button--accent show-dialog">
               Узнать подробнее
             </button>
           </div>
@@ -301,7 +333,7 @@
           <div class="mdl-cell mdl-cell--6-col cell-padding">
             <h3>Дед мороз и Снегурочка на дом<br> 30 мин</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum voluptas corrupti illo, eveniet, mollitia placeat voluptatibus atque delectus! Possimus consequuntur voluptate eveniet ut, similique dolorem corporis sed accusantium molestias autem blanditiis, saepe illum. Rem dolore, animi totam molestiae eveniet rerum iusto minima.</p>
-            <button class="mdl-button mdl-js-button mdl-button--accent">
+            <button class="mdl-button mdl-js-button mdl-button--accent show-dialog">
               Узнать подробнее
             </button>
           </div>
@@ -321,7 +353,7 @@
           <div class="mdl-cell mdl-cell--6-col cell-padding">
             <h3>Нестандартное выступление</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum voluptas corrupti illo, eveniet, mollitia placeat voluptatibus atque delectus! Possimus consequuntur voluptate eveniet ut, similique dolorem corporis sed accusantium molestias autem blanditiis, saepe illum. Rem dolore, animi totam molestiae eveniet rerum iusto minima.</p>
-            <button class="mdl-button mdl-js-button mdl-button--accent">
+            <button class="mdl-button mdl-js-button mdl-button--accent show-dialog">
               Узнать подробнее
             </button>
           </div>
@@ -416,18 +448,60 @@
             </table>
           </div>
       </section>
+      <section class="programms section_gray">
+        <a name="feedback"></a>
+        <h2 class="programms__title">Отзывы о нас</h2>
+        <div class="slider owl-carousel owl-theme">
+          <div class="mdl-grid container">
+            <div class="mdl-cell mdl-cell--6-col">
+              <div class="show show_4 mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title mdl-card--expand"></div>
+              </div>
+            </div>
+            <div class="mdl-cell mdl-cell--6-col cell-padding">
+              <p>
+                23.12.15 г.<br><br>В этом году впервые пригласили в гости Деда Мороза и Снегурочку, очень переживали, что ребёнок испугается и праздник будет испорчен. Но нам повезло, все было чудесно, дочка не испугалась, танцевала и даже спела песенку про елочку сидя у Деда Мороза на коленках. Нашей дочке 4 года. Спасибо ещё раз компании Монти Лайм за такую организованность, все вовремя и все четко отслеживалось о приходе и уходе артистов, что тоже не мало важно!!! Рекомендую теперь только Вас!!! Ждём следующего года и нового праздника!
+              </p>
+            </div>
+          </div>
+          <div class="mdl-grid container">
+            <div class="mdl-cell mdl-cell--6-col">
+              <div class="show show_5 mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title mdl-card--expand"></div>
+              </div>
+            </div>
+            <div class="mdl-cell mdl-cell--6-col cell-padding">
+              <p>
+                27.12.2015г.<br><br>Заказали но новогодний корпоратив Деда Мороза и 2 Снегурочки. Решили выделиться и заказать именно 2-х Снегурочек. Артисты подготовленные с набором конкурсов, загадок и прочих веселостей. Большое спасибо ребятам и девчатам из Монти Лайм! Советуем для проведения мероприятий, отработали на отлично )
+              </p>
+            </div>
+          </div>
+          <div class="mdl-grid container">
+            <div class="mdl-cell mdl-cell--6-col">
+              <div class="show no-image mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title mdl-card--expand"></div>
+              </div>
+            </div>
+            <div class="mdl-cell mdl-cell--6-col cell-padding">
+              <p>
+                30.12.2015г.<br><br> Протянули с выбором, но оставить ребенка без праздника не могли. Пригласили Деда Мороза и Снегурочку. Отметим профессиональную подготовку артистов, могут вовлечь ребенку в игру с конкурсом или загадкой. Еще нам очень понравился фокус с холодным льдом, когда ребенок увидел это "чудо" он был в ВОСТОРГЕ и мы тоже. Обязательно обратимся к ребятам из Монти Лайм.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="programms">
 
         <!-- Textfield with Floating Label -->
         <form action="#">
-        <h2 class="programms__title">Напишите нам, мы перезвоним</h2>
+        <h2 class="programms__title">Отправьте телефон, мы перезвоним</h2>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="sample3">
-            <label class="mdl-textfield__label" for="sample3">Как вас зовут</label>
+            <input class="mdl-textfield__input" type="text" id="sample1">
+            <label class="mdl-textfield__label" for="sample1">Как вас зовут</label>
           </div>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="sample3">
-            <label class="mdl-textfield__label" for="sample3">Ваш телефон</label>
+            <input class="mdl-textfield__input" type="text" id="sample2">
+            <label class="mdl-textfield__label" for="sample2">Ваш телефон</label>
           </div>
           <div class="btns">
             <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
@@ -439,7 +513,7 @@
       </section>
       <footer class="mdl-mini-footer">
         <div class="mdl-mini-footer__left-section">
-          <div class="mdl-logo">Дед Мороз в Кемерово</div>
+          <div class="mdl-logo">Зказать Деда Мороза в Кемерово</div>
           <ul class="mdl-mini-footer__link-list">
             <li><a href="#">Арт-группа Монти Лайм</a></li>
             <li><a href="tel:8 (904) 994-30-26">8 (904) 994-30-26</a></li>
@@ -449,5 +523,56 @@
     </main>
   </div>
 <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+<script defer src="dialog-polyfill.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="owl.carousel.min.js"></script>
+<script>
+
+$(document).ready(function() {
+  var $carousel = $('.slider');
+
+  $carousel.owlCarousel({
+    items: 1,
+    loop: true,
+    dots: true
+  });
+});
+
+</script>
+<dialog class="custom-dialog mdl-dialog">
+    <i class="material-icons close">close</i>
+    <form action="#">
+      <h2 class="programms__title">Отправьте телефон, мы перезвоним</h2>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" id="sample1">
+          <label class="mdl-textfield__label" for="sample1">Как вас зовут</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" id="sample2">
+          <label class="mdl-textfield__label" for="sample2">Ваш телефон</label>
+        </div>
+        <div class="btns">
+          <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+            Отправить
+          </button>
+        </div>
+      </form>
+  </dialog>
+  <script>
+    var dialog = document.querySelector('dialog');
+    var showDialogButton = $('.show-dialog');
+    if (! dialog.showModal) {
+      dialogPolyfill.registerDialog(dialog);
+    }
+
+    showDialogButton.on('click', function() {
+      dialog.showModal();
+    })
+
+    // showDialogButton.addEventListener();
+    dialog.querySelector('.close').addEventListener('click', function() {
+      dialog.close();
+    });
+  </script>
 </body>
 </html>
