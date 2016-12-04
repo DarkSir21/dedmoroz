@@ -1,0 +1,58 @@
+{
+  "name": "dedmoroz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dialog-polyfill.js",
+  "scripts": {
+    "css-build": "postcss -c config.js && webpack && node js/utils/critical.js",
+    "html-build": "html-minifier index.html -o html/min/index.html --collapse-inline-tag-whitespace --collapse-whitespace --remove-comments --remove-empty-attributes --collapse-inline-tag-whitespace",
+    "build": "npm run css-build && npm run html-build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarkSir21/dedmoroz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DarkSir21/dedmoroz/issues"
+  },
+  "homepage": "https://github.com/DarkSir21/dedmoroz#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.5.1",
+    "babel-cli": "*",
+    "babel-eslint": "*",
+    "babel-loader": "*",
+    "babel-plugin-transform-inline-environment-variables": "*",
+    "babel-preset-es2015": "*",
+    "babel-preset-react": "*",
+    "babel-preset-stage-0": "*",
+    "babel-root-import": "^4.1.3",
+    "compression-webpack-plugin": "*",
+    "critical": "^0.8.0",
+    "css-loader": "^0.25.0",
+    "cssnano": "^3.8.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "ignore-file-loader": "^1.0.0",
+    "ignore-loader": "^0.1.2",
+    "imports-loader": "^0.6.5",
+    "jquery": "^3.1.1",
+    "owl.carousel": "^2.2.0",
+    "postcss-cssnext": "^2.8.0",
+    "postcss-focus": "^1.0.0",
+    "postcss-font-magician": "^1.5.0",
+    "postcss-import": "^8.2.0",
+    "postcss-inline-svg": "^2.2.0",
+    "postcss-pxtorem": "^3.3.1",
+    "postcss-sprites": "^4.0.0",
+    "postcss-svg-fragments": "^1.3.2",
+    "purifycss-webpack-plugin": "^2.0.3",
+    "sourcebuster": "^1.1.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.3"
+  }
+}

@@ -2,241 +2,21 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="Заказать Деда мороза и Снегурочку в Кемерово">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="icons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="icons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="icons/manifest.json">
+  <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="icons/favicon.ico">
+  <meta name="msapplication-config" content="icons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
   <title>Заказ Деда Мороза и Снегурочки на дом в Кемерово</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
-  <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
-  <link rel="stylesheet" href="dialog-polyfill.css">
-  <link rel="stylesheet" href="owl.carousel.min.css">
-  <link rel="stylesheet" href="owl.theme.default.min.css">
+  <link rel="stylesheet" href="common.css">
 </head>
 <body>
-  <style>
-    body, html {
-      font-size: 16px;
-      font-family: 'Open Sans', sans-serif;
-    }
-
-    p {
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 300;
-      font-size: 1rem;
-      line-height: 1.5;
-    }
-
-    form {
-      max-width: 800px;
-      margin: 100px auto 100px;
-      text-align: center;
-    }
-
-    footer {
-      position: relative;
-    }
-
-    .bg-img {
-      position: relative;
-      background: url('images/sushhestvuet_li_ded_moroz.jpg') center / cover;
-      padding: 12% 5%;
-    }
-
-    .bg-img::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0,0,0,.7);
-    }
-
-    .main-content {
-      position: relative;
-      z-index: 10;
-    }
-
-    .main-title {
-      font-size: 58px;
-    }
-
-    .main-desc {
-      font-size: 38px;
-    }
-
-    .main-title,
-    .main-desc {
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 300;
-      text-align: center;
-      color: #fff;
-    }
-
-    .btns {
-      margin-top: 15px;
-      text-align: center;
-    }
-
-     .btns .mdl-button {
-      color: #fff;
-      margin: 15px;
-      height: 48px;
-      padding-right: 25px;
-      padding-left: 25px;
-    }
-
-    .btns .mdl-button--accent.mdl-button--accent.mdl-button--raised {
-      background-color: rgb(244,67,54);
-    }
-
-    .mdl-button--accent.mdl-button--accent {
-      color: rgb(244,67,54); 
-    }
-
-    span.blue {
-      display: inline-block;
-      /*padding: 0 8px;
-      background-color: rgb(3,169,244);*/
-    }
-
-    span.red {
-      display: inline-block;
-      /*padding: 0 8px;
-      background-color: rgb(244,67,54);*/
-    }
-
-    .phone {
-      padding-left: 25px;
-      text-decoration: none;
-      color: currentColor;      
-    }
-
-    .demo-layout-transparent .mdl-layout__header,
-    .demo-layout-transparent .mdl-layout__drawer-button {
-      /* This background is dark, so we set text to white. Use 87% black instead if
-        your background is light. */
-      color: #848484;
-      background-color: #fff;
-    }
-
-    .mdl-layout__header-row .mdl-navigation__link {
-      color: #848484;
-    }
-
-    .programms__title {
-      font-family: 'Open Sans', sans-serif;
-      text-align: center;
-      margin: 0 0 65px;
-      font-weight: 300;
-    }
-
-    .container {
-      max-width: 1400px;
-      margin: 40px auto 0;
-      padding: 8px;
-    }
-
-    .container:first-child {
-      margin-top: 0;
-    }
-
-    .container h3,
-    .container h4 {
-      font-weight: 300;
-      line-height: 1.5;
-      font-family: 'Open Sans', sans-serif;
-      margin: 0 0 25px;
-    }
-
-    .adv_image {
-      width: 50%;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .adv_image img {
-      max-width: 100%;
-    }
-
-    h4 {
-      text-align: center;
-    }
-
-    .cell-padding {
-      padding: 15px;
-    }
-
-    .container table,
-    .table__title {
-      width: 60%;
-      margin: 0 auto;
-    }
-
-    .table__title {
-      margin: 15px auto;
-      font-size: 14px;
-    }
-
-    @font-face {
-      font-family: "Rubl Regular";
-      font-weight: normal;
-      src: url('fonts/rubl-regular-webfont.woff2') format("woff2"), url('fonts/rubl-regular-webfont.woff') format("woff");
-    }
-
-  .rubl {
-    font-family: "Rubl Regular";
-  }
-
-  .section_gray {
-    background-color: #f6f6f6;
-  }
-
-  .programms {
-    padding: 80px 0;
-  }
-  
-  .custom-dialog.mdl-dialog {
-    width: 475px;
-  }
-
-  .close {
-    margin-left: 94%;
-    cursor: pointer;
-  }
-
-
-  .decor_* img {
-    max-width: 100%;
-  }
-
-  .decor_1 {
-    position: absolute;
-    width: 80px;
-    top: 30%;
-    left: calc(20% - 80px);
-  }
-
-  .decor_2 {
-    position: absolute;
-    width: 80px;
-    bottom: -78px;
-    right: 20%;
-  }
-
-  .decor_3 {
-    position: absolute;
-    width: 150px;
-    bottom: -116px;
-    right: 4%;
-  }
-
-  .decor_4 {
-    position: absolute;
-    width: 100px;
-    top: -100px;
-    right: 4%;
-  }
-
-  </style>
   <div class="demo-layout-transparent mdl-layout mdl-js-layout">
     <header class="mdl-layout__header mdl-layout--fixed-drawer">
       <div class="mdl-layout__header-row">
@@ -257,8 +37,8 @@
     <main class="mdl-layout__content">
       <div class="bg-img">
         <div class="main-content">
-          <h1 class="main-title">Закажи <span class="red">Деда Мороза</span> и <span class="blue">Снегурочку</span> на дом</h1>
-          <h2 class="main-desc">Получи скидку на первый заказ</h2>
+          <h1 class="main-title">Закажи Деда Мороза и Снегурочку на дом</h1>
+          <h2 class="main-desc">Получи скидку до 50% на первый заказ</h2>
           <div class="btns">
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent show-dialog">
               Заказать
@@ -285,7 +65,7 @@
             <div class="adv_image">
               <img src="images/giftbox.svg">
             </div>
-            <h4>Фиксированая<br>оплата</h4>
+            <h4>Фиксированная<br>оплата</h4>
             
           </div>
           <div class="mdl-cell mdl-cell--3-col cell-padding">
@@ -299,7 +79,7 @@
             <div class="adv_image">
               <img src="images/reindeer.svg">
             </div>
-            <h4>100%<br>трезвый Дед Мороз</h4>
+            <h4>100% трезвый<br>Дед Мороз</h4>
             
           </div>
         </div>
@@ -308,47 +88,7 @@
       <section class="programms section_gray">
         <a name="programms"></a>
         <h2 class="programms__title">Наши программы</h2>
-        <!-- Image card -->
-        <style>
-        .show.mdl-card {
-          width: 100%;
-          height: 425px;
-        }
-        .show > .mdl-card__actions {
-          height: 52px;
-          padding: 16px;
-          background: rgba(0, 0, 0, 0.2);
-        }
-        .show__filename {
-          color: #fff;
-          font-size: 14px;
-          font-weight: 500;
-        }
 
-        .show_1 {
-           background: url('images/show_1.jpg') center / cover;
-        }
-
-        .show_2 {
-           background: url('images/show_2.jpg') center / cover;
-        }
-
-        .show_3 {
-           background: url('images/show_3.jpg') center / cover;
-        }
-
-        .show_4 {
-           background: url('images/show_4.jpg') center / cover;
-        }
-        
-        .show_5 {
-           background: url('images/show_5.jpg') center / cover;
-        }
-        
-        .no-image {
-           background: url('images/no-image-box.png') center / cover;
-        }
-        </style>
 
         <div class="mdl-grid container">
           <div class="mdl-cell mdl-cell--6-col" style="position:relative">
@@ -359,7 +99,9 @@
           </div>
           <div class="mdl-cell mdl-cell--6-col cell-padding">
             <h3>Концертное выступление<br> более 45 мин</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum voluptas corrupti illo, eveniet, mollitia placeat voluptatibus atque delectus! Possimus consequuntur voluptate eveniet ut, similique dolorem corporis sed accusantium molestias autem blanditiis, saepe illum. Rem dolore, animi totam molestiae eveniet rerum iusto minima.</p>
+            <p>Наверняка на Новый год Вам нужны необычный Дед Мороз, роскошная Снегурочка, самые яркие шоу-программы и Ваши любимые артисты и звёзды эстрады. Также на корпоративный Новый год Вам конечно же понадобятся сказочный фейерверк, самое сладкое шампанское и весёлый новогодний ведущий.
+Как говорится "Как встретишь Новый 2017 Год - так его и проведёшь". Наверное стоит прислушаться к этой поговорке и подготовиться во всеоружии, особенно если вы хотите провести корпоративное новогодее мерприятие.
+Мы предлагаем организацию новогодних корпоративов, интересную новогоднюю программу к празднованию Нового года для корпоративной среды и для индивидуальных заказов.</p>
             <!-- Accent-colored flat button -->
             <button class="mdl-button mdl-js-button mdl-button--accent show-dialog">
               Узнать подробнее
@@ -370,7 +112,10 @@
         <div class="mdl-grid container">
           <div class="mdl-cell mdl-cell--6-col cell-padding">
             <h3>Дед мороз и Снегурочка на дом<br> 30 мин</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum voluptas corrupti illo, eveniet, mollitia placeat voluptatibus atque delectus! Possimus consequuntur voluptate eveniet ut, similique dolorem corporis sed accusantium molestias autem blanditiis, saepe illum. Rem dolore, animi totam molestiae eveniet rerum iusto minima.</p>
+            <p>Новый год для ребенка самая долгожданная и сказочная пора, когда исполняются все желания. Мы обещаем их исполнить!
+Настоящий Дед Мороз со своей любимой внучкой Снегурочкой придут поздравить Вас и Ваших детей с Новым 2017 Годом: домой, в школу, детский сад, ресторан, офис. Новогодняя песня, хлопушки и хоровод, конкурсы, загадки, игры, сюрпризы, подарки это куча веселья и новогоднего настроения!!!
+Хотите сделать сюрприз любимой, ребенку или начальнику? Пригласите на праздник Деда Мороза!
+А ещё можно пригласить аниматоров в костюмах сказочных персонажей!</p>
             <button class="mdl-button mdl-js-button mdl-button--accent show-dialog">
               Узнать подробнее
             </button>
@@ -390,7 +135,7 @@
           </div>
           <div class="mdl-cell mdl-cell--6-col cell-padding">
             <h3>Нестандартное выступление</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum voluptas corrupti illo, eveniet, mollitia placeat voluptatibus atque delectus! Possimus consequuntur voluptate eveniet ut, similique dolorem corporis sed accusantium molestias autem blanditiis, saepe illum. Rem dolore, animi totam molestiae eveniet rerum iusto minima.</p>
+            <p>Если из предложенных вариантов ничего не подходит, сценаристы и артисты нашей компании подготовят для Вас эксклюзивный вариант организации корпоративного праздника. Корпоративная культура компании, бюджет, и любые пожелания Заказчика – все будет приниматься во внимание при подготовке сценария нестандартного новогоднего вечера!</p>
             <button class="mdl-button mdl-js-button mdl-button--accent show-dialog">
               Узнать подробнее
             </button>
@@ -415,76 +160,93 @@
               <thead>
                 <tr>
                   <th class="mdl-data-table__cell--non-numeric">Дата</th>
+                  <th>Цены без скидки</th>
                   <th>Цена</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td class="mdl-data-table__cell--non-numeric">До 19 декабря</td>
-                  <td>3300 <span class="rubl">Р</span></td>
+                  <td><s>5500</s></td>
+                  <td>3300<span class="rubl">Р</span></td>
                 </tr>
                 <tr>
                   <td class="mdl-data-table__cell--non-numeric">20-22 декабря</td>
-                  <td>4200 <span class="rubl">Р</span></td>
+                  <td><s>5600</s></td>
+                  <td>4200<span class="rubl">Р</span></td>
                 </tr>
                 <tr>
                   <td class="mdl-data-table__cell--non-numeric">23-25 декабря</td>
+                  <td><s>5900</s></td>
                   <td>4400 <span class="rubl">Р</span></td>
                 </tr>
                 <tr>
                   <td class="mdl-data-table__cell--non-numeric">26-29 декабря</td>
+                  <td><s>6200</s></td>
                   <td>4700 <span class="rubl">Р</span></td>
                 </tr>
                 <tr>
                   <td class="mdl-data-table__cell--non-numeric">30 декабря</td>
+                  <td><s>6400</s></td>
                   <td>4800 <span class="rubl">Р</span></td>
                 </tr>
                 <tr>
                   <td class="mdl-data-table__cell--non-numeric">31 декабря до 15:00</td>
+                  <td><s>6600</s></td>
                   <td>5500 <span class="rubl">Р</span></td>
                 </tr>
                 <tr>
                   <td class="mdl-data-table__cell--non-numeric">31 декабря до 15:00 до 17:00</td>
+                  <td><s>6800</s></td>
                   <td>6500 <span class="rubl">Р</span></td>
                 </tr>
                 <tr>
                   <td class="mdl-data-table__cell--non-numeric">31 декабря до 17:00 до 19:00</td>
+                  <td><s>8300</s></td>
                   <td>7500 <span class="rubl">Р</span></td>
                 </tr>
                 <tr>
                   <td class="mdl-data-table__cell--non-numeric">31 декабря до 19:00 до 21:00</td>
+                  <td><s>8600</s></td>
                   <td>8000 <span class="rubl">Р</span></td>
                 </tr>
                 <tr>
                   <td class="mdl-data-table__cell--non-numeric">31 декабря до 21:00 до 22:00</td>
+                  <td><s>9900</s></td>
                   <td>9000 <span class="rubl">Р</span></td>
                 </tr>
                 <tr>
                   <td class="mdl-data-table__cell--non-numeric">31 декабря до  22:00 до 23:00</td>
+                  <td><s>10500</s></td>
                   <td>9500 <span class="rubl">Р</span></td>
                 </tr>
                 <tr>
                   <td class="mdl-data-table__cell--non-numeric">31 декабря до  23:00 до 01:00</td>
+                  <td><s>11000</s></td>
                   <td>10000 <span class="rubl">Р</span></td>
                 </tr>
                 <tr>
                   <td class="mdl-data-table__cell--non-numeric">31 декабря после 01:00</td>
+                  <td><s>11000</s></td>
                   <td>9000 <span class="rubl">Р</span></td>
                 </tr>
                 <tr>
                   <td class="mdl-data-table__cell--non-numeric">2 января</td>
+                  <td><s>4000</s></td>
                   <td>3000 <span class="rubl">Р</span></td>
                 </tr>
                 <tr>
                   <td class="mdl-data-table__cell--non-numeric">3-6 января</td>
+                  <td><s>3600</s></td>
                   <td>2900 <span class="rubl">Р</span></td>
                 </tr>
                 <tr>
                   <td class="mdl-data-table__cell--non-numeric">7-8 января</td>
+                  <td><s>5000</s></td>
                   <td>4000 <span class="rubl">Р</span></td>
                 </tr>
                 <tr>
-                  <td colspan="2" style="text-align:left">*Все цены указаны с учетом скидки</td>
+                  <td colspan="3" style="text-align:left">*Все цены указаны с учетом скидки</td>
                 </tr>
               </tbody>
             </table>
@@ -503,7 +265,7 @@
             </div>
             <div class="mdl-cell mdl-cell--6-col cell-padding">
               <p>
-                23.12.15 г.<br><br>В этом году впервые пригласили в гости Деда Мороза и Снегурочку, очень переживали, что ребёнок испугается и праздник будет испорчен. Но нам повезло, все было чудесно, дочка не испугалась, танцевала и даже спела песенку про елочку сидя у Деда Мороза на коленках. Нашей дочке 4 года. Спасибо ещё раз компании Монти Лайм за такую организованность, все вовремя и все четко отслеживалось о приходе и уходе артистов, что тоже не мало важно!!! Рекомендую теперь только Вас!!! Ждём следующего года и нового праздника!
+                23.12.15 г.<br><br>В этом году впервые сделали заказ Деда Мороза на новый год, очень переживали, что ребёнок испугается и праздник будет испорчен. Но нам повезло, все было чудесно, дочка не испугалась, танцевала и даже спела песенку про елочку сидя у Деда Мороза на коленках. Нашей дочке 4 года. Спасибо ещё раз компании Монти Лайм за такую организованность, все вовремя и все четко отслеживалось о приходе и уходе артистов, что тоже не мало важно!!! Рекомендую теперь только Вас!!! Ждём следующего года и нового праздника!
               </p>
             </div>
           </div>
@@ -521,7 +283,7 @@
           </div>
           <div class="mdl-grid container">
             <div class="mdl-cell mdl-cell--6-col">
-              <div class="show no-image mdl-card mdl-shadow--2dp">
+              <div class="show show_6 mdl-card mdl-shadow--2dp">
                 <div class="mdl-card__title mdl-card--expand"></div>
               </div>
             </div>
@@ -539,11 +301,11 @@
         <form action="#">
         <h2 class="programms__title">Отправьте телефон, мы перезвоним</h2>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="sample1">
+            <input class="mdl-textfield__input" type="text" id="sample1" name="name">
             <label class="mdl-textfield__label" for="sample1">Как вас зовут</label>
           </div>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="sample2">
+            <input class="mdl-textfield__input" type="text" id="sample2" name="phone">
             <label class="mdl-textfield__label" for="sample2">Ваш телефон</label>
           </div>
           <div class="btns">
@@ -558,7 +320,7 @@
         <div class="mdl-mini-footer__left-section">
           <div class="mdl-logo">Зказать Деда Мороза в Кемерово</div>
           <ul class="mdl-mini-footer__link-list">
-            <li><a href="#">Арт-группа Монти Лайм</a></li>
+            <li><a href="https://montylime.ru">Арт-группа Монти Лайм</a></li>
             <li><a href="tel:8 (904) 994-30-26">8 (904) 994-30-26</a></li>
           </ul>
         </div>
@@ -566,33 +328,16 @@
       </footer>
     </main>
   </div>
-<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
-<script defer src="dialog-polyfill.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="owl.carousel.min.js"></script>
-<script>
-
-$(document).ready(function() {
-  var $carousel = $('.slider');
-
-  $carousel.owlCarousel({
-    items: 1,
-    loop: true,
-    dots: true
-  });
-});
-
-</script>
 <dialog class="custom-dialog mdl-dialog">
     <i class="material-icons close">close</i>
     <form action="#">
       <h2 class="programms__title">Отправьте телефон, мы перезвоним</h2>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="text" id="sample1">
+          <input class="mdl-textfield__input" type="text" id="sample1" name="name">
           <label class="mdl-textfield__label" for="sample1">Как вас зовут</label>
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="text" id="sample2">
+          <input class="mdl-textfield__input" type="text" id="sample2" name="phone">
           <label class="mdl-textfield__label" for="sample2">Ваш телефон</label>
         </div>
         <div class="btns">
@@ -602,21 +347,17 @@ $(document).ready(function() {
         </div>
       </form>
   </dialog>
+  <script async src="common.js"></script>
+  <!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter40990379 = new Ya.Metrika({ id:40990379, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/40990379" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
   <script>
-    var dialog = document.querySelector('dialog');
-    var showDialogButton = $('.show-dialog');
-    if (! dialog.showModal) {
-      dialogPolyfill.registerDialog(dialog);
-    }
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    showDialogButton.on('click', function() {
-      dialog.showModal();
-    })
+    ga('create', 'UA-52857148-6', 'auto');
+    ga('send', 'pageview');
 
-    // showDialogButton.addEventListener();
-    dialog.querySelector('.close').addEventListener('click', function() {
-      dialog.close();
-    });
   </script>
 </body>
 </html>

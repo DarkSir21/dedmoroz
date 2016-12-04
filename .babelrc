@@ -1,0 +1,7 @@
+{
+  "presets": ["es2015", "stage-0"],
+  "plugins": [
+    ["babel-root-import","transform-inline-environment-variables"]
+  ],
+  "ignore": ["jquery"]
+}
