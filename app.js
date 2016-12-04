@@ -25,6 +25,7 @@ $(document).ready(function() {
   }
 
   showDialogButton.on('click', function() {
+    window.yaCounter40990379.reachGoal('popup_on');
     dialog.showModal();
   })
 
@@ -48,6 +49,7 @@ $(document).ready(function() {
     })
     .then(res => res.json())
     .then(data => {
+      window.yaCounter40990379.reachGoal('send_form');
       console.log(data);
       if(data.good) e.target.innerHTML = `<span class="success-message">${data.good}</span>`;
     });
